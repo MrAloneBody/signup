@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="410dp"
+    android:layout_height="match_parent"
+    android:background="#708EFA"
+    android:backgroundTint="#C1E7F8"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:id="@+id/sign_out_bar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            >
+            <TextView
+                android:id="@+id/Show_user_name"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:hint="Username">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/ImgSignOut"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:src="@drawable/signout_img">
+
+            </ImageView>
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/News_feedback_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
+
+        <TextView
+            android:id="@+id/News_fragment"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:background="#FF03DAC5"
+            android:backgroundTint="#FF03DAC5"
+            android:text="News"
+            android:textAlignment="center">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/Feedback_fragment"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:background="#FF03DAC5"
+            android:backgroundTint="#FF03DAC5"
+            android:text="Feedback"
+            android:textAlignment="center">
+
+        </TextView>
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/News_fragment">
+        </FrameLayout>
+
+        <ScrollView
+            android:id="@+id/Current_matches_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="410dp"
+                android:layout_height="840dp"
+                android:background="#708EFA"
+                android:backgroundTint="#C1E7F8">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </ScrollView>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
